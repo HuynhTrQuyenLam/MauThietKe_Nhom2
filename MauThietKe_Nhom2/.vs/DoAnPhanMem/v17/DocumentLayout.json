@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|e:\\huflit\\2023-2024\\project\\mtkpm\\mauthietke_nhom2\\mauthietke_nhom2\\doanphanmem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|solutionrelative:doanphanmem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|e:\\huflit\\2023-2024\\project\\mtkpm\\mauthietke_nhom2\\mauthietke_nhom2\\doanphanmem\\proxy\\accountproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|solutionrelative:doanphanmem\\proxy\\accountproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|e:\\huflit\\2023-2024\\project\\mtkpm\\mauthietke_nhom2\\mauthietke_nhom2\\doanphanmem\\proxy\\iaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|solutionrelative:doanphanmem\\proxy\\iaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|e:\\huflit\\2023-2024\\project\\mtkpm\\mauthietke_nhom2\\mauthietke_nhom2\\doanphanmem\\proxy\\realsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|solutionrelative:doanphanmem\\proxy\\realsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|e:\\huflit\\2023-2024\\project\\mtkpm\\mauthietke_nhom2\\mauthietke_nhom2\\doanphanmem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|solutionrelative:doanphanmem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|e:\\huflit\\2023-2024\\project\\mtkpm\\mauthietke_nhom2\\mauthietke_nhom2\\doanphanmem\\areas\\admin\\controllers\\productsadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|solutionrelative:doanphanmem\\areas\\admin\\controllers\\productsadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|e:\\huflit\\2023-2024\\project\\mtkpm\\mauthietke_nhom2\\mauthietke_nhom2\\doanphanmem\\factory method\\productfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13A5BFD6-28AA-4EE0-A3BC-B6C7267919B6}|DoAnPhanMem\\DoAnPhanMem.csproj|solutionrelative:doanphanmem\\factory method\\productfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "DoAnPhanMem\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "DoAnPhanMem\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAFUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T14:43:45.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RealSubject.cs",
+              "DocumentMoniker": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Proxy\\RealSubject.cs",
+              "RelativeDocumentMoniker": "DoAnPhanMem\\Proxy\\RealSubject.cs",
+              "ToolTip": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Proxy\\RealSubject.cs",
+              "RelativeToolTip": "DoAnPhanMem\\Proxy\\RealSubject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T14:43:18.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAccount.cs",
+              "DocumentMoniker": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Proxy\\IAccount.cs",
+              "RelativeDocumentMoniker": "DoAnPhanMem\\Proxy\\IAccount.cs",
+              "ToolTip": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Proxy\\IAccount.cs",
+              "RelativeToolTip": "DoAnPhanMem\\Proxy\\IAccount.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T14:42:43.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountProxy.cs",
+              "DocumentMoniker": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Proxy\\AccountProxy.cs",
+              "RelativeDocumentMoniker": "DoAnPhanMem\\Proxy\\AccountProxy.cs",
+              "ToolTip": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Proxy\\AccountProxy.cs",
+              "RelativeToolTip": "DoAnPhanMem\\Proxy\\AccountProxy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T14:41:31.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Web.config",
+              "RelativeDocumentMoniker": "DoAnPhanMem\\Web.config",
+              "ToolTip": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Web.config",
+              "RelativeToolTip": "DoAnPhanMem\\Web.config",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAEwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-17T14:34:37.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductFactory.cs",
+              "DocumentMoniker": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Factory Method\\ProductFactory.cs",
+              "RelativeDocumentMoniker": "DoAnPhanMem\\Factory Method\\ProductFactory.cs",
+              "ToolTip": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Factory Method\\ProductFactory.cs",
+              "RelativeToolTip": "DoAnPhanMem\\Factory Method\\ProductFactory.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T14:22:44.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductsAdminController.cs",
+              "DocumentMoniker": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Areas\\Admin\\Controllers\\ProductsAdminController.cs",
+              "RelativeDocumentMoniker": "DoAnPhanMem\\Areas\\Admin\\Controllers\\ProductsAdminController.cs",
+              "ToolTip": "E:\\HUFLIT\\2023-2024\\PROJECT\\MTKPM\\MauThietKe_Nhom2\\MauThietKe_Nhom2\\DoAnPhanMem\\Areas\\Admin\\Controllers\\ProductsAdminController.cs",
+              "RelativeToolTip": "DoAnPhanMem\\Areas\\Admin\\Controllers\\ProductsAdminController.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAiwGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T14:02:51.685Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

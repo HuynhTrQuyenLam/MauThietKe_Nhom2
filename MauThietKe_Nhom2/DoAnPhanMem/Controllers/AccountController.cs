@@ -7,7 +7,9 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using DoAnPhanMem.Iterator;
 using DoAnPhanMem.Models;
+using DoAnPhanMem.Proxy;
 using Newtonsoft.Json;
 using PagedList;
 
@@ -52,37 +54,68 @@ namespace DoAnPhanMem.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public ActionResult Register()
+        private IAccount _registrationProxy;
+        public AccountController()
         {
-            Account model = new Account();
-            if (User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            return View(model);
+            // Tạo một đối tượng thuộc kiểu RealSubject
+            var realSubject = new RealSubject();
+
+            // Truyền đối tượng realSubject vào constructor của AccountProxy
+            _registrationProxy = new AccountProxy(realSubject);
         }
-        //Code xử lý đăng ký
+
+
+        // Phương thức đăng ký tài khoản sử dụng Proxy
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Register(Account account)
         {
-            var checkemail = db.Accounts.FirstOrDefault(m => m.email == account.email);
-            if (checkemail != null)
+            try
             {
-                Notification.setNotification3s("Email đã được sử dụng!!!", "error");
+                _registrationProxy.Register(account);
+                Session["TaiKhoan"] = account;
+                Notification.setNotification1_5s("Đăng ký thành công", "success");
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                Notification.setNotification3s("Đăng ký thất bại: " + ex.Message, "error");
                 return View();
             }
-            int roleid = db.Roles.FirstOrDefault(role => role.role_name == "Người dùng")?.role_id ?? 0;
-            account.acc_status = "1";
-            account.role_id = roleid;
-            account.avatar = "/Content/Images/avatar/default.jpg";
-            db.Configuration.ValidateOnSaveEnabled = false;
-            db.Accounts.Add(account);
-            db.SaveChanges();
-            Session["TaiKhoan"] = account;
-            Notification.setNotification1_5s("Đăng ký thành công", "success");
-            return RedirectToAction("Index", "Home", account);
         }
+
+
+        //public ActionResult Register()
+        //{
+        //    Account model = new Account();
+        //    if (User.Identity.IsAuthenticated)
+        //    {
+        //        return RedirectToAction("Index", "Home");
+        //    }
+        //    return View(model);
+        //}
+        ////Code xử lý đăng ký
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Register(Account account)
+        //{
+        //    var checkemail = db.Accounts.FirstOrDefault(m => m.email == account.email);
+        //    if (checkemail != null)
+        //    {
+        //        Notification.setNotification3s("Email đã được sử dụng!!!", "error");
+        //        return View();
+        //    }
+        //    int roleid = db.Roles.FirstOrDefault(role => role.role_name == "Người dùng")?.role_id ?? 0;
+        //    account.acc_status = "1";
+        //    account.role_id = roleid;
+        //    account.avatar = "/Content/Images/avatar/default.jpg";
+        //    db.Configuration.ValidateOnSaveEnabled = false;
+        //    db.Accounts.Add(account);
+        //    db.SaveChanges();
+        //    Session["TaiKhoan"] = account;
+        //    Notification.setNotification1_5s("Đăng ký thành công", "success");
+        //    return RedirectToAction("Index", "Home", account);
+        //}
         public ActionResult ChangePassword()
         {
             var user = Session["TaiKhoan"] as Account;
@@ -184,18 +217,22 @@ namespace DoAnPhanMem.Controllers
             var user = Session["TaiKhoan"] as Account;
             var userid = user.acc_id;
             var checkdefault = db.AccountAddresses.Where(m => m.acc_id == userid).ToList();
-            var limit_address = db.AccountAddresses.Where(m => m.acc_id == userid).ToList();
+
+            // Sử dụng Iterator để duyệt qua danh sách checkdefault
+            //IIterator<Address> iterator = new AddressIterator(checkdefault);
+            IIterator<AccountAddress> iterator = new AddressIterator(checkdefault);
+            while (!iterator.IsDone())
+            {
+                var item = iterator.Next();
+                if (item.isDefault == true && address.isDefault == true)
+                {
+                    item.isDefault = false;
+                    db.SaveChanges();
+                }
+            }
+
             try
             {
-
-                foreach (var item in checkdefault)
-                {
-                    if (item.isDefault == true && address.isDefault == true)
-                    {
-                        item.isDefault = false;
-                        db.SaveChanges();
-                    }
-                }
                 address.acc_id = userid;
                 db.AccountAddresses.Add(address);
                 db.SaveChanges();
@@ -207,6 +244,7 @@ namespace DoAnPhanMem.Controllers
             {
                 return Json(result, JsonRequestBehavior.AllowGet);
             }
+            
         }
         //Lịch sử mua hàng
         public ActionResult TrackingOrder(int? page)

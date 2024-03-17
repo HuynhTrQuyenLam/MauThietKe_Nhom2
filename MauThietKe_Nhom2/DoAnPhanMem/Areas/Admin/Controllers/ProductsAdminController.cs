@@ -10,6 +10,7 @@ using DoAnPhanMem;
 using DoAnPhanMem.Areas.Admin.Controllers;
 using DoAnPhanMem.Common.Helpers;
 using DoAnPhanMem.DTOs;
+using DoAnPhanMem.Factory_Method;
 using DoAnPhanMem.Models;
 using PagedList;
 
@@ -78,42 +79,33 @@ namespace DoAnPhanMem.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Create(Product product)
+        public ActionResult Create(Product productDTO)
         {
-            ViewBag.ListDiscount =
-                new SelectList(db.Discounts.OrderBy(m => m.discount_price), "discount_id", "discount_name", 0);
-            ViewBag.ListBrand = new SelectList(db.Brands, "brand_id", "brand_name", 0);
-            ViewBag.ListGenre = new SelectList(db.Categories, "cate_id", "cate_name", 0);
             try
             {
-                if (product.ImageUpload != null)
-                {
-                    var fileName = Path.GetFileNameWithoutExtension(product.ImageUpload.FileName);
-                    var extension = Path.GetExtension(product.ImageUpload.FileName);
-                    fileName = fileName + DateTime.Now.ToString("HH-mm-dd-MM-yyyy") + extension;
-                    product.pro_img = "/Content/Images/product/" + fileName;
-                    product.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/Images/product/"), fileName));
-                }
-                else
-                {
-                    Notification.setNotification3s("Vui lòng thêm Ảnh Thumbnail!", "error");
-                    return View(product);
-                }
-                product.status_ = "1";
-                product.buyturn = 0;
-                product.specification = product.specification;
-                product.pro_description = product.pro_description;
-                product.cate_id = product.cate_id;
-                product.update_at = DateTime.Now;
+                decimal decimalPrice = (decimal)productDTO.price;
+
+                Product product = ProductFactory.CreateProduct(productDTO.pro_name,
+                                                               productDTO.quantity,
+                                                               productDTO.pro_description,
+                                                               productDTO.specification,
+                                                               productDTO.discount_id,
+                                                               productDTO.price,
+                                                               productDTO.brand_id,
+                                                               productDTO.cate_id,
+                                                               productDTO.ImageUpload);
+
+                // Thêm đối tượng vào cơ sở dữ liệu
                 db.Products.Add(product);
                 db.SaveChanges();
+
                 Notification.setNotification1_5s("Thêm mới thành công!", "success");
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
-                Notification.setNotification1_5s("Lỗi", "error");
-                return View(product);
+                Notification.setNotification3s(ex.Message, "error");
+                return View(productDTO);
             }
         }
 
